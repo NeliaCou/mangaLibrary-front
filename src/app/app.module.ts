@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchPageComponent } from './modules/search-page/search-page.component';
 import { MangaPageComponent } from './modules/manga-page/manga-page.component';
 import { AddMangaPageComponent } from './modules/add-manga-page/add-manga-page.component';
+import { ErrorComponent } from './modules/error/error.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddMangaPageComponent } from './modules/add-manga-page/add-manga-page.c
     HomepageComponent,
     SearchPageComponent,
     MangaPageComponent,
-    AddMangaPageComponent
+    AddMangaPageComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
