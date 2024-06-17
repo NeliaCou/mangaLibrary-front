@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  homeIcon: string = 'assets/accueil.png';
+  bookIcon: string = 'assets/livre.png';
+  shearchIcon: string = 'assets/loupe.png';
+
 }
