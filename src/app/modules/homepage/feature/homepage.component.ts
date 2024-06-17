@@ -16,7 +16,7 @@ export class HomepageComponent implements OnInit{
 
   constructor(
     private _router: Router,
-    private _mangaService: MangaService
+    private _mangaService: MangaService,
   ){}
 
   ngOnInit(): void {
@@ -27,5 +27,9 @@ export class HomepageComponent implements OnInit{
 
   onMangaCardClicked(manga: Manga) {
     this._router.navigate(['/my-manga'], { queryParams: { id: manga.id } });
+  }
+
+  onCreateManga() {
+    this._router.navigate(['/new-manga'])
   }
 }

@@ -1,1 +1,33 @@
-<p>new-manga-page works!</p>
+<form (ngSubmit)="onSubmit()">
+  <h2>Titre du manga</h2>
+  <label for="titleInput">Titre</label>
+  <input id="titleInput" type="text" [(ngModel)]="mangaTitle" name="title" />
+
+  <h2>Auteur du manga</h2>
+  <label for="authorInput">Auteur</label>
+  <input id="authorInput" type="text" [(ngModel)]="mangaAuthor" name="author" />
+
+  <h2>Image du manga</h2>
+  <label for="avatarInput">Avatar</label>
+  <input id="avatarInput" type="text" [(ngModel)]="mangaAvatar" name="avatar" />
+
+  <h2>Nombre de chapitre</h2>
+  <label for="volumeInput">Nombre de pages</label>
+  <input
+    id="volumeInput"
+    type="text"
+    [(ngModel)]="mangaVolumeNumber"
+    name="volumeNumber"
+  />
+
+  <h2>Genre du manga</h2>
+  <label for="genreInput">Genre</label>
+  <input
+    id="genreInput"
+    type="text"
+    [(ngModel)]="mangaLibrary"
+    name="genreInput"
+  />
+
+  <button type="submit">Enregistrer</button>
+</form>
