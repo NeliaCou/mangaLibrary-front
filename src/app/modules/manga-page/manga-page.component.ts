@@ -13,14 +13,14 @@ export class MangaPageComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
-    private mangaService: MangaService
+    private _router: Router,
+    private _mangaService: MangaService
   ) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const id = params['id'];
-      this.mangaService.getMangaById(id).subscribe(manga => {
+      this._mangaService.getMangaById(id).subscribe(manga => {
         this.manga = manga;
       });
     });
@@ -28,9 +28,15 @@ export class MangaPageComponent {
 
   onDeleteManga(): void {
     if (this.manga && this.manga.id) {
-      this.mangaService.deleteManga(this.manga.id).subscribe(() => {
-        this.router.navigate(['/']);
+      this._mangaService.deleteManga(this.manga.id).subscribe(() => {
+        this._router.navigate(['/']);
       });
+    }
+  }
+
+  onEditManga(): void {
+    if (this.manga && this.manga.id) {
+      this._router.navigate(['/edit-manga', this.manga.id]);
     }
   }
 }
