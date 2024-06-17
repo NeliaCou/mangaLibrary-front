@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './modules/homepage/feature/homepage.component';
 import { ErrorComponent } from './modules/error/error.component';
 import { MangaPageComponent } from './modules/manga-page/manga-page.component';
+import { AddMangaPageComponent } from './modules/add-manga-page/add-manga-page.component';
+import { NewMangaPageComponent } from './modules/new-manga-page/new-manga-page.component';
 
 const routes: Routes = [
   { 
@@ -17,6 +19,14 @@ const routes: Routes = [
   {
     path: 'my-manga',
     component: MangaPageComponent
+  },
+  {
+    path: 'add-manga',
+    component: AddMangaPageComponent
+  },
+  {
+    path: 'new-manga',
+    component: NewMangaPageComponent
   },
   {
     path: '**',

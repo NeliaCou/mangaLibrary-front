@@ -1,0 +1,32 @@
+img {
+  height: 18rem;
+}
+.manga-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+button {
+  margin: 1rem;
+  font-size: 14px;
+  height: 2rem;
+  width: 14rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.green {
+  background-color: #7d914a;
+}
+
+.red {
+  background-color: #b93f3f;
+}

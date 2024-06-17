@@ -13,6 +13,7 @@ import { ErrorComponent } from './modules/error/error.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { MangaCardComponent } from './modules/homepage/ui/manga-card/manga-card.component';
+import { NewMangaPageComponent } from './modules/new-manga-page/new-manga-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MangaCardComponent } from './modules/homepage/ui/manga-card/manga-card.
     MangaPageComponent,
     AddMangaPageComponent,
     ErrorComponent,
-    MangaCardComponent
+    MangaCardComponent,
+    NewMangaPageComponent
   ],
   imports: [
     BrowserModule,
