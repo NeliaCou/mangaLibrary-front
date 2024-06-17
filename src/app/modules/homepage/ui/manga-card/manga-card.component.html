@@ -1,0 +1,11 @@
+<div class="card-container" (click)="onMangaClick()">
+  <div class="card">
+    <img
+      [src]="mangaChild.avatar || 'https://via.placeholder.com/300x200'"
+      alt="Image de la carte"
+    />
+    <div class="card-content">
+      <h2>{{ mangaChild.title }}</h2>
+    </div>
+  </div>
+</div>

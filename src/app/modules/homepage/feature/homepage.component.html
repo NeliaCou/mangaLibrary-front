@@ -1,0 +1,19 @@
+<h1>Bienvenue dans ta bibliothèque de manga !</h1>
+
+<h2>Mes mangas</h2>
+
+<div class="card-container">
+  <ng-container *ngIf="mangas$ | async as mangas">
+    <app-manga-card
+      *ngFor="let manga of mangas"
+      [mangaChild]="manga"
+      (mangaClicked)="onMangaCardClicked($event)"
+    ></app-manga-card>
+  </ng-container>
+</div>
+
+<h2>Mes genres</h2>
+
+<section class="shojo">
+  <h2>Shojo</h2>
+</section>
