@@ -1,9 +1,15 @@
+h1,
+p {
+  font-family: nunito;
+}
+
 img {
   height: 18rem;
 }
 .manga-container {
   display: flex;
   flex-direction: row;
+  margin: 2rem 2rem 2rem 2rem;
 }
 
 .button {
@@ -17,10 +23,12 @@ img {
 button {
   margin: 1rem;
   font-size: 14px;
+  border-radius: 15px;
+  width: 12rem;
   height: 2rem;
-  width: 14rem;
-  border-radius: 10px;
   color: white;
+  border: none;
+  font-family: nunito;
 }
 
 .green {

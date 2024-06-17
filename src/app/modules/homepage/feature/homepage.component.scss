@@ -49,18 +49,32 @@ h2 {
   }
 }
 
-.shojo {
-  background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTw4XNK-G1N07gQHCKY5jY7r4J_GLEmjIbwaVoTwWbgTlvdR4EH");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.6;
+.button-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  h2 {
-    opacity: none;
+  margin-top: 2rem;
+  button {
+    border-radius: 15px;
+    width: 12rem;
+    height: 2rem;
+    border: none;
+    background-color: #000000;
+    color: white;
   }
 }
+
+// .shojo {
+//   background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTw4XNK-G1N07gQHCKY5jY7r4J_GLEmjIbwaVoTwWbgTlvdR4EH");
+//   background-repeat: no-repeat;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+//   opacity: 0.6;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   h2 {
+//     opacity: none;
+//   }
+// }

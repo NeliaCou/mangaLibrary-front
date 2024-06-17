@@ -1,21 +1,27 @@
-<form (ngSubmit)="onSubmit()">
-  <h2>{{ (manga$ | async)?.title }}</h2>
+<h1>Modifier les informations</h1>
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()">
+    <label for="titleInput">Changer titre</label>
+    <input id="titleInput" type="text" [(ngModel)]="mangaTitle" name="title" />
 
-  <label for="titleInput">Changer titre</label>
-  <input id="titleInput" type="text" [(ngModel)]="mangaTitle" name="title" />
+    <label for="authorInput">Changer auteur</label>
+    <input
+      id="authorInput"
+      type="text"
+      [(ngModel)]="mangaAuthor"
+      name="author"
+    />
 
-  <h2>{{ (manga$ | async)?.author }}</h2>
-  <label for="authorInput">Changer auteur</label>
-  <input id="authorInput" type="text" [(ngModel)]="mangaAuthor" name="author" />
+    <label for="volumeInput">Changer nombre de tome</label>
+    <input
+      id="volumeInput"
+      type="text"
+      [(ngModel)]="mangaVolumeNumber"
+      name="volumeNumber"
+    />
 
-  <h2>{{ (manga$ | async)?.volumeNumber }}</h2>
-  <label for="volumeInput">Changer nombre de pages</label>
-  <input
-    id="volumeInput"
-    type="text"
-    [(ngModel)]="mangaVolumeNumber"
-    name="volumeNumber"
-  />
-
-  <button type="submit">Enregistrer</button>
-</form>
+    <div class="button-container">
+      <button type="submit">Enregistrer</button>
+    </div>
+  </form>
+</div>
