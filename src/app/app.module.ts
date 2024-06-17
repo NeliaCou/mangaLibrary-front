@@ -10,6 +10,8 @@ import { SearchPageComponent } from './modules/search-page/search-page.component
 import { MangaPageComponent } from './modules/manga-page/manga-page.component';
 import { AddMangaPageComponent } from './modules/add-manga-page/add-manga-page.component';
 import { ErrorComponent } from './modules/error/error.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ErrorComponent } from './modules/error/error.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
