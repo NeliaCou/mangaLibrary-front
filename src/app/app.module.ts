@@ -12,6 +12,8 @@ import { SharedModule } from './shared/shared.module';
 import { MangaCardComponent } from './modules/homepage/ui/manga-card/manga-card.component';
 import { NewMangaPageComponent } from './modules/new-manga-page/new-manga-page.component';
 import { EditMangaPageComponent } from './modules/edit-manga-page/edit-manga-page.component';
+import { AllMangaPageComponent } from './modules/all-manga-page/all-manga-page.component';
+import { ShearchPageComponent } from './modules/shearch-page/shearch-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EditMangaPageComponent } from './modules/edit-manga-page/edit-manga-pag
     ErrorComponent,
     MangaCardComponent,
     NewMangaPageComponent,
-    EditMangaPageComponent
+    EditMangaPageComponent,
+    AllMangaPageComponent,
+    ShearchPageComponent
   ],
   imports: [
     BrowserModule,

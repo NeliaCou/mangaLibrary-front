@@ -4,11 +4,11 @@
     <h2>Accueil</h2>
   </section>
   <section>
-    <img [src]="bookIcon" alt="mes mangas" />
+    <img [src]="bookIcon" alt="mes mangas" (click)="toAllManga()" />
     <h2>Mangas</h2>
   </section>
   <section>
-    <img [src]="shearchIcon" alt="chercher" />
+    <img [src]="shearchIcon" alt="chercher" (click)="toShearch()" />
     <h2>Chercher</h2>
   </section>
 </div>

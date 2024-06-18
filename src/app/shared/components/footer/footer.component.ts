@@ -19,4 +19,12 @@ export class FooterComponent {
   OnClick(){
     this._router.navigate(['/']);
   }
+
+  toAllManga(){
+    this._router.navigate(['/all-manga'])
+  }
+
+  toShearch(){
+    this._router.navigate(['/shearch']);
+  }
 }
