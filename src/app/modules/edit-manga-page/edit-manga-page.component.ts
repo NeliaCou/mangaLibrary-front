@@ -7,10 +7,9 @@ import { Observable, switchMap } from 'rxjs';
 @Component({
   selector: 'app-edit-manga-page',
   templateUrl: './edit-manga-page.component.html',
-  styleUrl: './edit-manga-page.component.scss'
+  styleUrl: './edit-manga-page.component.scss',
 })
-export class EditMangaPageComponent implements OnInit{
-
+export class EditMangaPageComponent implements OnInit {
   manga$!: Observable<Manga>;
   mangaTitle: string = '';
   mangaAuthor: string = '';
@@ -23,11 +22,11 @@ export class EditMangaPageComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    this._route.params.subscribe(params => {
+    this._route.params.subscribe((params) => {
       const id = +params['id'];
       if (id) {
         this.manga$ = this._mangaService.getMangaById(id);
-        this.manga$.subscribe(manga => {
+        this.manga$.subscribe((manga) => {
           this.mangaTitle = manga.title;
           this.mangaAuthor = manga.author;
           this.mangaVolumeNumber = manga.volumeNumber;
@@ -37,20 +36,24 @@ export class EditMangaPageComponent implements OnInit{
   }
 
   onSubmit(): void {
-    this.manga$.pipe(
-      switchMap(manga => {
-        manga.title = this.mangaTitle;
-        manga.author = this.mangaAuthor;
-        manga.volumeNumber = this.mangaVolumeNumber;
-        return this._mangaService.updateManga(manga.id, manga);
-      })
-    ).subscribe(
-      updatedManga => {
-        this._router.navigate(['/my-manga'], { queryParams: { id: updatedManga.id } });
-      },
-      error => {
-        console.error('Error updating manga:', error);
-      }
-    );
+    this.manga$
+      .pipe(
+        switchMap((manga) => {
+          manga.title = this.mangaTitle;
+          manga.author = this.mangaAuthor;
+          manga.volumeNumber = this.mangaVolumeNumber;
+          return this._mangaService.updateManga(manga.id, manga);
+        })
+      )
+      .subscribe(
+        {
+          next: (updatedManga) =>
+            this._router.navigate(['/my-manga'], {
+              queryParams: { id: updatedManga.id },
+            }),
+          error: (error) => console.error(error),
+          complete: () => console.info('complete'),
+        }
+      );
   }
 }

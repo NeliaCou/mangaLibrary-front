@@ -8,10 +8,9 @@ import { UpdateMangaDTO } from '../../shared/models/update-manga-DTO';
 @Component({
   selector: 'app-new-manga-page',
   templateUrl: './new-manga-page.component.html',
-  styleUrl: './new-manga-page.component.scss'
+  styleUrl: './new-manga-page.component.scss',
 })
 export class NewMangaPageComponent {
-
   manga$!: Observable<UpdateMangaDTO>;
   mangaId: number = 0;
   mangaTitle: string = '';
@@ -33,16 +32,13 @@ export class NewMangaPageComponent {
       author: this.mangaAuthor,
       avatar: this.mangaAvatar,
       volumeNumber: this.mangaVolumeNumber,
-      libraryId: this.mangaLibrary
+      libraryId: this.mangaLibrary,
     };
-  
-    this._mangaService.createManga(newManga).subscribe(
-      (createdManga: Manga) => {
-        this._router.navigate(['/']);
-      },
-      (error) => {
-        console.error('Erreur lors de la création du manga :', error);
-      }
-    );
+
+    this._mangaService.createManga(newManga).subscribe({
+      next: () => this._router.navigate(['/']),
+      error: (error) => console.error(error),
+      complete: () => console.info('complete'),
+    });
   }
 }

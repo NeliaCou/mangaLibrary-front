@@ -22,14 +22,11 @@ export class SearchPageComponent {
   onChange(value: string): void {
     this.emitChanges.emit(this.searchedValue);
     if (this.searchedValue.length > 0) { 
-      this.mangaService.getMangaByTitle(this.searchedValue).subscribe(
-        (results: Manga[]) => {
-          this.searchResults = results;
-        },
-        error => {
-          console.error('Error fetching search results:', error);
-        }
-      );
+      this.mangaService.getMangaByTitle(this.searchedValue).subscribe({
+        next: (results: Manga[]) => this.searchResults = results,
+        error: (error) => console.error(error),
+        complete: () => console.info('complete'),
+      });
     } else {
       this.searchResults = [];
     }
