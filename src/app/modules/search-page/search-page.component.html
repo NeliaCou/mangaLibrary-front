@@ -1,1 +1,21 @@
-<p>search-page works!</p>
+<label for="search-manga">Chercher votre manga</label>
+<input
+  type="search"
+  name="search-manga"
+  id="search-manga"
+  placeholder="Le nom ici..."
+  [(ngModel)]="searchedValue"
+  (ngModelChange)="onChange($event)"
+/>
+
+<div class="card-container">
+  <div *ngFor="let manga of searchResults" class="card">
+    <img
+      [src]="manga.avatar || 'https://via.placeholder.com/300x200'"
+      alt="Image du manga"
+    />
+    <div class="card-content">
+      <h2>{{ manga.title }}</h2>
+    </div>
+  </div>
+</div>

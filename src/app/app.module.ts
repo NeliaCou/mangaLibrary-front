@@ -13,7 +13,6 @@ import { MangaCardComponent } from './modules/homepage/ui/manga-card/manga-card.
 import { NewMangaPageComponent } from './modules/new-manga-page/new-manga-page.component';
 import { EditMangaPageComponent } from './modules/edit-manga-page/edit-manga-page.component';
 import { AllMangaPageComponent } from './modules/all-manga-page/all-manga-page.component';
-import { ShearchPageComponent } from './modules/shearch-page/shearch-page.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { ShearchPageComponent } from './modules/shearch-page/shearch-page.compon
     MangaCardComponent,
     NewMangaPageComponent,
     EditMangaPageComponent,
-    AllMangaPageComponent,
-    ShearchPageComponent
+    AllMangaPageComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { MangaPageComponent } from './modules/manga-page/manga-page.component';
 import { NewMangaPageComponent } from './modules/new-manga-page/new-manga-page.component';
 import { EditMangaPageComponent } from './modules/edit-manga-page/edit-manga-page.component';
 import { AllMangaPageComponent } from './modules/all-manga-page/all-manga-page.component';
-import { ShearchPageComponent } from './modules/shearch-page/shearch-page.component';
+import { SearchPageComponent } from './modules/search-page/search-page.component';
 
 const routes: Routes = [
   { 
@@ -35,8 +35,8 @@ const routes: Routes = [
     component: AllMangaPageComponent
   },
   {
-    path: 'shearch',
-    component: ShearchPageComponent
+    path: 'search',
+    component: SearchPageComponent
   },
   {
     path: '**',

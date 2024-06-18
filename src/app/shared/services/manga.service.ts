@@ -25,6 +25,10 @@ export class MangaService {
     return this._http.get<Manga[]>(this._BASE_URL + `/genre/${genre}`);
   }
 
+  getMangaByTitle(title: string): Observable<Manga[]>{
+    return this._http.get<Manga[]>(this._BASE_URL + `/title/${title}`);
+  }
+
   createManga(manga: Manga): Observable<Manga> {
     return this._http.post<Manga>(this._BASE_URL + `/add`, manga);
   }

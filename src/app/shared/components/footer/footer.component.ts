@@ -25,6 +25,6 @@ export class FooterComponent {
   }
 
   toShearch(){
-    this._router.navigate(['/shearch']);
+    this._router.navigate(['/search']);
   }
 }
