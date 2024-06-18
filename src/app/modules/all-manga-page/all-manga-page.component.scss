@@ -3,6 +3,9 @@
   flex-direction: column;
   margin-left: 2rem;
   padding-bottom: 12rem;
+  h1 {
+    font-family: nunito;
+  }
   h2 {
     font-size: 32px;
     font-family: nunito;
@@ -12,7 +15,7 @@
   .card-container {
     display: flex;
     flex-direction: row;
-
+    overflow-x: scroll;
     .card {
       background-color: #fff;
       overflow: hidden;

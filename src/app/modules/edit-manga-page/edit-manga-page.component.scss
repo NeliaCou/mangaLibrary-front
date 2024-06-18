@@ -1,9 +1,9 @@
 form {
   display: flex;
   flex-direction: column;
-
   margin-left: 2rem;
   font-family: nunito;
+  padding-bottom: 12rem;
   label {
     font-size: 20px;
     font-weight: bold;
@@ -20,6 +20,7 @@ form {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    padding-bottom: 12rem;
     button {
       border-radius: 15px;
       width: 12rem;
