@@ -20,39 +20,13 @@ h2 {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
-
-  .card {
-    background-color: #fff;
-    overflow: hidden;
-    width: 10rem;
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    :hover {
-      transform: translateY(-10px);
-    }
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .card-content {
-      padding: 15px;
-    }
-    h2 {
-      margin: 0;
-      font-size: 1em;
-    }
-  }
 }
 
 .button-container {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  padding-bottom: 12rem;
   button {
     border-radius: 15px;
     width: 12rem;

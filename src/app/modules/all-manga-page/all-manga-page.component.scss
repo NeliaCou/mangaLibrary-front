@@ -1,0 +1,46 @@
+.global-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  padding-bottom: 12rem;
+  h2 {
+    font-size: 32px;
+    font-family: nunito;
+    font-weight: 800;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+
+    .card {
+      background-color: #fff;
+      overflow: hidden;
+      width: 10rem;
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 6px 6px 5px #b5afaf;
+      border-radius: 15px;
+      :hover {
+        transform: translateY(-10px);
+      }
+      img {
+        width: 100%;
+        height: auto;
+        //   border-radius: 10px;
+      }
+      .card-content {
+        padding: 15px;
+      }
+      h2 {
+        margin: 0;
+        font-size: 1em;
+      }
+    }
+  }
+}

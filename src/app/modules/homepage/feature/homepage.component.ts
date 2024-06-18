@@ -20,9 +20,7 @@ export class HomepageComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
-    this.mangas$ = this._mangaService.getAllMangas().pipe(
-      tap(mangas => console.log('Mangas récupérés:', mangas))
-    );
+    this.mangas$ = this._mangaService.getAllMangas()
   }
 
   onMangaCardClicked(manga: Manga) {
