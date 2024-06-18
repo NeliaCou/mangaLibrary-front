@@ -17,12 +17,11 @@
   />
 
   <label for="genreInput">Genre</label>
-  <input
-    id="genreInput"
-    type="text"
-    [(ngModel)]="mangaLibrary"
-    name="genreInput"
-  />
+  <select id="genreInput" [(ngModel)]="mangaLibrary" name="genreInput">
+    <option *ngFor="let library of libraries" [value]="library.id">
+      {{ library.genre }}
+    </option>
+  </select>
 
   <div class="button-container">
     <button type="submit">Enregistrer</button>

@@ -9,27 +9,27 @@ import { Library } from '../models/library-type';
 })
 export class LibraryService {
 
-  private readonly _BASE_URL = environment + '/libraries';
+  private readonly _BASE_URL = environment.baseUrl + '/libraries';
 
   constructor(private _http: HttpClient) { }
 
   getAllLibraries(): Observable<Library[]> {
-    return this._http.get<Library[]>(`${this._BASE_URL}/get/all`);
+    return this._http.get<Library[]>(this._BASE_URL + `/get/all`);
   }
 
   getLibraryById(id: number): Observable<Library> {
-    return this._http.get<Library>(`${this._BASE_URL}/get/${id}`);
+    return this._http.get<Library>(this._BASE_URL + `/get/${id}`);
   }
 
   createLibrary(library: Library): Observable<Library> {
-    return this._http.post<Library>(`${this._BASE_URL}/add`, library);
+    return this._http.post<Library>(this._BASE_URL + `/add`, library);
   }
 
   updateLibrary(id: number, library: Library): Observable<Library> {
-    return this._http.put<Library>(`${this._BASE_URL}/update/${id}`, library);
+    return this._http.put<Library>(this._BASE_URL + `/update/${id}`, library);
   }
 
   deleteLibrary(id: number): Observable<void> {
-    return this._http.delete<void>(`${this._BASE_URL}/delete/${id}`);
+    return this._http.delete<void>(this._BASE_URL + `/delete/${id}`);
   }
 }
