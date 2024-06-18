@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmit()">
+  <label for="titleInput">Titre</label>
+  <input id="titleInput" type="text" [(ngModel)]="mangaTitle" name="title" />
+
+  <label for="authorInput">Auteur</label>
+  <input id="authorInput" type="text" [(ngModel)]="mangaAuthor" name="author" />
+
+  <label for="avatarInput">Avatar</label>
+  <input id="avatarInput" type="text" [(ngModel)]="mangaAvatar" name="avatar" />
+
+  <label for="volumeInput">Nombre de tome</label>
+  <input
+    id="volumeInput"
+    type="text"
+    [(ngModel)]="mangaVolumeNumber"
+    name="volumeNumber"
+  />
+
+  <label for="genreInput">Genre</label>
+  <select id="genreInput" [(ngModel)]="mangaLibrary" name="genreInput">
+    <option *ngFor="let library of libraries" [value]="library.id">
+      {{ library.genre }}
+    </option>
+  </select>
+
+  <div class="button-container">
+    <button type="submit">Enregistrer</button>
+  </div>
+</form>

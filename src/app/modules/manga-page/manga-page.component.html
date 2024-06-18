@@ -1,0 +1,13 @@
+<div *ngIf="manga" class="manga-container">
+  <img [src]="manga.avatar" alt="{{ manga.title }}" />
+  <div class="manga-info">
+    <h1>{{ manga.title }}</h1>
+    <p><b>Auteur:</b> {{ manga.author }}</p>
+    <p><b>Nombre de volumes: </b>{{ manga.volumeNumber }}</p>
+  </div>
+</div>
+
+<div class="button">
+  <button type="button" class="green" (click)="onEditManga()">Modifier</button>
+  <button type="button" class="red" (click)="onDeleteManga()">Supprimer</button>
+</div>

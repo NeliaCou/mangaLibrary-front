@@ -1,0 +1,40 @@
+<div class="global-container">
+  <h1>Shojo</h1>
+  <div class="card-container">
+    <div *ngFor="let manga of shojos" class="card">
+      <img
+        [src]="manga.avatar || 'https://via.placeholder.com/300x200'"
+        alt="Image de la carte"
+      />
+      <div class="card-content">
+        <h2>{{ manga.title }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <h1>Shonen</h1>
+  <div class="card-container">
+    <div *ngFor="let manga of shonens" class="card">
+      <img
+        [src]="manga.avatar || 'https://via.placeholder.com/300x200'"
+        alt="Image de la carte"
+      />
+      <div class="card-content">
+        <h2>{{ manga.title }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <h1>Josei</h1>
+  <div class="card-container">
+    <div *ngFor="let manga of joseis" class="card">
+      <img
+        [src]="manga.avatar || 'https://via.placeholder.com/300x200'"
+        alt="Image du manga"
+      />
+      <div class="card-content">
+        <h2>{{ manga.title }}</h2>
+      </div>
+    </div>
+  </div>
+</div>

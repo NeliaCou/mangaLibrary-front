@@ -1,0 +1,54 @@
+:host {
+  display: flex;
+  width: 100vw;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 18px;
+  font-family: nunito;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: nunito;
+  font-weight: 800;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 12rem;
+  button {
+    border-radius: 15px;
+    width: 12rem;
+    height: 2rem;
+    border: none;
+    background-color: #000000;
+    color: white;
+  }
+}
+
+// .shojo {
+//   background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTw4XNK-G1N07gQHCKY5jY7r4J_GLEmjIbwaVoTwWbgTlvdR4EH");
+//   background-repeat: no-repeat;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+//   opacity: 0.6;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   h2 {
+//     opacity: none;
+//   }
+// }

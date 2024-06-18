@@ -1,0 +1,41 @@
+h1,
+p {
+  font-family: nunito;
+}
+
+img {
+  height: 18rem;
+}
+.manga-container {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 2rem 2rem 2rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+button {
+  margin: 1rem;
+  font-size: 14px;
+  border-radius: 15px;
+  width: 12rem;
+  height: 2rem;
+  color: white;
+  border: none;
+  font-family: nunito;
+}
+
+.green {
+  background-color: #7d914a;
+}
+
+.red {
+  background-color: #b93f3f;
+  margin-bottom: 12rem;
+}
